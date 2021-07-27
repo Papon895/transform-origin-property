@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>transform origin</title>
+   <style type="text/css" media="all">
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+      .main {
+         width: 100vw;
+         height: 100vh;
+         display: grid;
+         place-items: center;
+         background-image: linear-gradient(to left top, #0e080b, #5b282d, #a25329, #c39800, #a8eb12);
+         position: relative;
+      }
+      a {
+         color: #fff;
+         text-decoration: none;
+         background-color:rgb(3,49,115);
+         width: 120px;
+         text-align: center;
+         padding: 10px 0;
+         font-size: 16px;
+         font-weight: bold;
+         transition: 0.4s;
+         border-top-right-radius: 50px;
+         border-bottom-right-radius: 50px;
+         border-left: 5px solid coral;
+         transform-origin: left;
+         z-index: 1;
+      }
+      a:hover {
+         transform: scaleX(1.5);
+         
+      }
+      .circle1 {
+         background-image: radial-gradient(circle, #478e55, #008f7c, #008ca0, #0083b3, #5d77b2);
+         width: 130px;
+         height: 130px;
+         border-radius: 50%;
+         position: absolute;
+         top: 20px;
+         right: 20%;
+         z-index: ;
+         transition: 0.4s;
+         transform-origin: left;
+      }
+      .circle1:hover {
+         transform: rotate(-360deg);
+      }
+      .circle2 {
+         background: #1D2B64;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F8CDDA, #1D2B64);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F8CDDA, #1D2B64); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+         position: absolute;
+         left: 20%;
+         bottom: 20px;
+         width: 130px;
+         height: 130px;
+         border-radius: 50%;
+         transition: 0.4s;
+         transform-origin: left;
+      }
+      .circle2:hover {
+         transform: rotate(360deg);
+      }
+   </style>
+</head>
+<body>
+   <div class="main">
+      
+      <a href="#"><span class="hover">Hover Me</span></a>
+      <div class="circle1"></div>
+      
+      <div class="circle2"></div>
+   </div>
+</body>
+</html>
